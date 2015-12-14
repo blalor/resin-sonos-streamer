@@ -1,0 +1,31 @@
+# -*- ini -*-
+
+[general]
+# duration of encoding, in seconds. 0 means forever
+duration = 0
+bufferSecs = 5
+reconnect = yes
+realtime = yes
+
+[input]
+device = hw:Device
+
+# sample rate in Hz. not sure what to use with the s/pdif input…
+sampleRate = @@INPUT_SAMPLERATE@@
+
+bitsPerSample = 16
+channel = 2
+
+[icecast2-0]
+public = yes
+
+format      = mp3
+bitrateMode = @@ICECAST_BITRATE_MODE@@
+quality     = @@ICECAST_QUALITY@@
+
+server      = @@ICECAST_SERVER@@
+port        = @@ICECAST_PORT@@
+password    = @@ICECAST_PASSWORD@@
+mountPoint  = @@ICECAST_MOUNT@@
+name        = @@ICECAST_NAME@@
+description = @@ICECAST_DESCRIPTION@@
