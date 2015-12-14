@@ -31,3 +31,15 @@ This should be pretty straightforward.
 5. listen!
 
 Ok, there are probably some missing steps, since I don't actually have a Sonos Connect to work with, yet, but in theory…
+
+## Configuration
+
+* `PCM_CAPTURE_SOURCE` - the PCM source for the sound card; defaults to `IEC958 In`.  The other suitable option may be `Line`.  Consult `amixer` for details.
+* `INPUT_SAMPLERATE` - Sample rate; defaults to `48000`, but `44100` may be appropriate.  Need to verify this, still.
+* `ICECAST_SERVER`, `ICECAST_PORT` - Address and port of your Icecast server.
+* `ICECAST_PASSWORD` - Password for the Icecast server (or mount point).
+* `ICECAST_MOUNT` - Icecast mount point name; no leading `/` (eg. `boston`).
+* `ICECAST_NAME` - Friendly name of this stream (eg. `Boston office`).
+* `ICECAST_DESCRIPTION` - Description of the stream (eg. `it's a baby fuckin' whale, khed!`).
+* `ICECAST_BITRATE_MODE` - `cbr`, `abr`, or `vbr`; defaults to `vbr`
+* `ICECAST_QUALITY` - value depends on the bitrate mode; defaults to `0.8`
