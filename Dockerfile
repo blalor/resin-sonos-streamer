@@ -18,4 +18,4 @@ ENV ICECAST_QUALITY 0.8
 # ENV ICECAST_NAME
 # ENV ICECAST_DESCRIPTION
 
-CMD ["/usr/bin/supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "--nodaemon", "--configuration", "/etc/supervisor/supervisord.conf"]
