@@ -5,6 +5,7 @@ set -e -u -o pipefail
 cd "$( dirname "${0}" )"
 
 ./rebuild-and-install-darkice.sh
+./build-and-install-ezstream.sh
 
 apt-get -y --no-install-recommends install \
     dropbear \

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ezstream>
+    <url>http://@@ICECAST_SERVER@@:@@ICECAST_PORT@@/@@ICECAST_MOUNT@@</url>
+    <sourcepassword>@@ICECAST_PASSWORD@@</sourcepassword>
+    <format>MP3</format>
+    <filename>stdin</filename>
+
+    <!-- Use the meta.sh script to get metadata -->
+    <!-- <metadata_progname>meta.sh</metadata_progname> -->
+    <!-- Set the metadata string according to this format: -->
+    <!-- <metadata_format>@s@: @a@ - @t@</metadata_format> -->
+    <!-- Update metadata from meta.sh at least once every 10 seconds: -->
+    <!-- <metadata_refreshinterval>10</metadata_refreshinterval> -->
+
+    <!--
+      Important:
+      For streaming from standard input, the default for continuous streaming
+      is bad. Set <stream_once /> to 1 here to prevent ezstream from spinning
+      endlessly when the input stream stops:
+     -->
+    <stream_once>0</stream_once>
+
+    <svrinfoname>@@ICECAST_NAME@@</svrinfoname>
+    <svrinfodescription><![CDATA[@@ICECAST_DESCRIPTION@@]]></svrinfodescription>
+
+    <svrinfopublic>0</svrinfopublic>
+</ezstream>
