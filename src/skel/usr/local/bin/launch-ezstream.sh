@@ -22,8 +22,8 @@ sed \
     -e "s#@@ICECAST_NAME@@#${ICECAST_NAME}#g" \
     -e "s#@@ICECAST_DESCRIPTION@@#${ICECAST_DESCRIPTION}#g" \
     \
-    < /etc/ezstream.cfg.in \
-    > /etc/ezstream.cfg
+    < /etc/ezstream.xml.in \
+    > /etc/ezstream.xml
 
 arecord -D hw:Device -f cd --buffer-size=192000 | \
     lame -V "${lame_vbr_quality}" -r -s "${lame_sample_rate}" --bitwidth 16 - - | \
