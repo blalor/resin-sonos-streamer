@@ -5,8 +5,7 @@ set -e -u -x -o pipefail
 apt-get -y --no-install-recommends install \
     libshout3-dev \
     libxml2-dev \
-    lame \
-    curl
+    lame
 
 ## set up build directory
 builddir=$( mktemp -d )
