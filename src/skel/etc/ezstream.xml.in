@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ezstream>
-    <url>http://@@ICECAST_SERVER@@:@@ICECAST_PORT@@/@@ICECAST_MOUNT@@</url>
+    <url>@@ICECAST_PROTO@@://@@ICECAST_SERVER@@:@@ICECAST_PORT@@/@@ICECAST_MOUNT@@</url>
     <sourcepassword>@@ICECAST_PASSWORD@@</sourcepassword>
     <format>MP3</format>
     <filename>stdin</filename>

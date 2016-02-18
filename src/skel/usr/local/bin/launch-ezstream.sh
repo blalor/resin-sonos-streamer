@@ -15,6 +15,7 @@ lame_vbr_quality=${ICECAST_QUALITY}
 
 ## generate config
 sed \
+    -e "s#@@ICECAST_PROTO@@#${ICECAST_PROTO}#g" \
     -e "s#@@ICECAST_SERVER@@#${ICECAST_SERVER}#g" \
     -e "s#@@ICECAST_PORT@@#${ICECAST_PORT}#g" \
     -e "s#@@ICECAST_PASSWORD@@#${ICECAST_PASSWORD}#g" \
