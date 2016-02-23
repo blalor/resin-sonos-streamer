@@ -2,13 +2,7 @@
 
 set -e -u -o pipefail
 
-## diag
-lsusb
-cat /proc/asound/cards
-arecord -l
-
-## configure S/PDIF in
-amixer -c Device set 'PCM Capture Source' "${PCM_CAPTURE_SOURCE:-IEC958 In}"
+/usr/local/bin/configure-mixer.sh
 
 lame_sample_rate=$( python -c "print('%.1f' % (float(${INPUT_SAMPLERATE})/1000))" )
 lame_vbr_quality=${ICECAST_QUALITY}
