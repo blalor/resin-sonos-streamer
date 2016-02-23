@@ -20,6 +20,6 @@ sed \
     < /etc/ezstream.xml.in \
     > /etc/ezstream.xml
 
-arecord -D hw:Device -f cd --buffer-size=192000 | \
+arecord -D hw:Device --mmap -f cd --buffer-size=192000 | \
     lame -V "${lame_vbr_quality}" -r -s "${lame_sample_rate}" --bitwidth 16 - - | \
     ezstream -c /etc/ezstream.xml
